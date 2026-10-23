@@ -1,0 +1,34 @@
+{
+  "name": "nearnest-server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "node index.js",
+    "test": "node run-tests.js",
+    "test:reviews-reports": "node test-reviews-and-reports.js",
+    "test:real": "node test-real-flow.js",
+    "test:geo-media": "node test-geo-media.js",
+    "test:chat": "node test-chat-contact.js",
+    "test:admin": "node --env-file=.env test-admin-edit.js",
+    "test:messages": "node --env-file=.env test-messages-hub.js",
+    "seed": "node src/seed.js",
+    "verify:db": "node verify-db.js",
+    "backup": "node scripts/backup.mjs",
+    "restore:test": "node scripts/restore-test.mjs",
+    "test:additions": "node test-prod-additions.mjs"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^18.0.8",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.11.2",
+    "multer": "^2.4.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^11.3.0"
+  }
+}
